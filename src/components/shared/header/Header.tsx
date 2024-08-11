@@ -8,7 +8,7 @@ const Header = () => {
       borderWidth={4}
       borderLeftStyle={"none"}
       borderRightStyle={"none"}
-      py={2}
+      py={10}
       px={4}
     >
       <Flex align="center" justify="space-between">
@@ -29,18 +29,30 @@ const Header = () => {
         {/* Search and Lookup */}
         <Flex align="center">
           <Input placeholder="Search" size="sm" mr={2} />
-          <Button size="sm" mr={4}>
+          <Button
+            size="sm"
+            paddingRight={"5"}
+            paddingLeft={"5"}
+            width={"fit-content"}
+          >
             Search
           </Button>
         </Flex>
 
         <Flex align="center">
           <Input placeholder="Enter Stone ID" size="sm" mr={2} />
-          <Button mr={4}>Lookup Stone</Button>
+          <Button
+            size="sm"
+            paddingRight={"5"}
+            paddingLeft={"5"}
+            width={"fit-content"}
+          >
+            Lookup Stone
+          </Button>
         </Flex>
 
         {/* Selected Stones Link */}
-        <Link href="#" color="teal.600">
+        <Link href="#" color="teal.600" fontWeight={700}>
           Selected Stones(5)
         </Link>
       </Flex>

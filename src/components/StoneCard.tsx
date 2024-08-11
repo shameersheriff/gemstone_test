@@ -9,6 +9,7 @@ interface StoneCardProps {
   location: string;
   available: boolean;
   selected: boolean;
+  imageSrc?: string;
   onToggleSelect: () => void;
 }
 
@@ -20,11 +21,12 @@ const StoneCard: React.FC<StoneCardProps> = ({
   location,
   available,
   selected,
+  imageSrc,
   onToggleSelect,
 }) => {
   return (
     <Box border="1px" borderRadius="md" p={4}>
-      <Image src="/path/to/stone-image.jpg" alt={name} mb={2} />
+      <Image src={imageSrc} alt={name} mb={2} />
       <Text fontSize="sm">{id}</Text>
       <Text fontWeight="bold" fontSize="lg">
         {name}
