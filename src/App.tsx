@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Grid,
-  Input,
   Button,
   Text,
   Stack,
   Select,
-  Heading,
   HStack,
 } from "@chakra-ui/react";
 import StoneCard from "./components/StoneCard";
