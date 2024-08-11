@@ -13,14 +13,14 @@ const Header = () => {
     >
       <Flex align="center" justify="space-between">
         {/* Logo and Title */}
-        <Flex align="center">
+        <Flex align="center" flexDirection={"column"} alignItems={'flex-start'}>
           <Box>
-            <Text fontSize="xl" fontWeight="bold" color="teal.600">
+            <Text fontSize="1rem" fontWeight="bold" color="teal.600">
               myGemStock.com/
             </Text>
           </Box>
           <Box>
-            <Text fontSize="xl" fontWeight="bold" color="teal.800">
+            <Text fontSize="1.5rem" fontWeight="bold" color="teal.600">
               SapphireSource
             </Text>
           </Box>

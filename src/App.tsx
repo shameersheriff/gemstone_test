@@ -1,12 +1,9 @@
 import { useState } from "react";
-import {
-  Box,
-  Grid,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Grid, Text } from "@chakra-ui/react";
 import StoneCard from "./components/StoneCard";
 import Header from "./components/shared/header/Header";
 import FilterBar from "./components/shared/filter-bar/FilterBar";
+import FilterButton from "./components/shared/filter-button/FilterButton";
 
 const StonePage = () => {
   const [selectedStones, setSelectedStones] = useState<number[]>([]);
@@ -22,7 +19,7 @@ const StonePage = () => {
   const stones = [
     {
       id: 101102,
-      imageSrc: 'assets/images/gems/blue.png',
+      imageSrc: "assets/images/gems/blue.png",
       name: "Natural Corundum Sapphire Princess",
       weight: "0.229",
       size: "3.39x3.35x2.13",
@@ -31,7 +28,7 @@ const StonePage = () => {
     },
     {
       id: 101101,
-      imageSrc: 'assets/images/gems/green.jpg',
+      imageSrc: "assets/images/gems/green.jpg",
       name: "Natural Corundum Sapphire Princess",
       weight: "0.275",
       size: "3.41x3.39x2.65",
@@ -40,7 +37,7 @@ const StonePage = () => {
     },
     {
       id: 101103,
-      imageSrc: 'assets/images/gems/blue.png',
+      imageSrc: "assets/images/gems/blue.png",
       name: "Natural Corundum Sapphire Princess",
       weight: "0.275",
       size: "3.41x3.39x2.65",
@@ -49,7 +46,7 @@ const StonePage = () => {
     },
     {
       id: 101104,
-      imageSrc: 'assets/images/gems/green.jpg',
+      imageSrc: "assets/images/gems/green.jpg",
       name: "Natural Corundum Sapphire Princess",
       weight: "0.275",
       size: "3.41x3.39x2.65",
@@ -59,7 +56,7 @@ const StonePage = () => {
     {
       id: 101105,
       name: "Natural Corundum Sapphire Princess",
-      imageSrc: 'assets/images/gems/blue.png',
+      imageSrc: "assets/images/gems/blue.png",
       weight: "0.275",
       size: "3.41x3.39x2.65",
       location: "Colombo",
@@ -68,7 +65,7 @@ const StonePage = () => {
     {
       id: 101106,
       name: "Natural Corundum Sapphire Princess",
-      imageSrc: 'assets/images/gems/green.jpg',
+      imageSrc: "assets/images/gems/green.jpg",
       weight: "0.275",
       size: "3.41x3.39x2.65",
       location: "Colombo",
@@ -80,8 +77,11 @@ const StonePage = () => {
     <Box p={4}>
       <Header />
       <Box mt={4} mb={4}>
-        <Text fontSize="lg" fontWeight={700}>Number of Available Stones: {stones.length}</Text>
+        <Text fontSize="lg" fontWeight={700}>
+          Number of Available Stones: {stones.length}
+        </Text>
       </Box>
+      <FilterButton />
       <FilterBar />
       <Grid templateColumns="repeat(4, 1fr)" gap={4} mt={4}>
         {stones.map((stone) => (
