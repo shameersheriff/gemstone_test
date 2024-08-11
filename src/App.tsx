@@ -74,16 +74,25 @@ const StonePage = () => {
   ];
 
   return (
-    <Box p={4}>
+    <Box p={{ base: 2, md: 4 }}>
       <Header />
-      <Box mt={4} mb={4}>
-        <Text fontSize="lg" fontWeight={700}>
+      <Box mt={{ base: 2, md: 4 }} mb={{ base: 2, md: 4 }}>
+        <Text fontSize={{ base: "md", md: "lg" }} fontWeight={700}>
           Number of Available Stones: {stones.length}
         </Text>
       </Box>
       <FilterButton />
       <FilterBar />
-      <Grid templateColumns="repeat(4, 1fr)" gap={4} mt={4}>
+      <Grid
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
+          lg: "repeat(4, 1fr)",
+        }}
+        gap={4}
+        mt={4}
+      >
         {stones.map((stone) => (
           <StoneCard
             key={stone.id}
